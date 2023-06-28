@@ -1,0 +1,24 @@
+La liste de tous les utilisateurs :
+SELECT * FROM `users` 
+2. La liste de tous les utilisateurs rangée par noms de famille :
+SELECT * FROM `users` ORDER BY `users`.`last_name` ASC 
+3. Le dernier utilisateur inscrit :
+SELECT * FROM `users` ORDER BY `users`.`registration_date` DESC 
+4. La liste de tous les utilisateurs fêtant leur anniversaire ce mois-ci :
+SELECT * FROM `users` ORDER BY `users`.`birthdate` WHERE MONTH(birthdate) = MONTH(CURDATE())
+5. Le nombre total d'utilisateurs :
+SELECT COUNT(*) AS total_users FROM `users`
+6. La liste de tous les utilisateurs associés à leurs villes respectives :
+SELECT * FROM `addresses` WHERE `addresses`.`city`
+7. La liste de tous les utilisateurs vivant à une adresse sans numéro :
+SELECT * FROM `addresses` WHERE `addresses`.`number` = NULL
+8. La liste de tous les produits dont le prix est supérieur à 1 000 € :
+SELECT * FROM `products` WHERE `products`.`price > 1000
+9. La liste de tous les produits associés à leurs photos respectives :
+SELECT * FROM `pictures` ORDER BY `pictures`.`caption` DESC 
+10. La liste de tous les produits appartenant à la catégorie « Voyage » : 
+SELECT * FROM `mikaellesguer_3watrade`.`categories` WHERE `id` = 'eb2a6a17-5a62-11eb-bc37-0242c0a8e002'
+11. La liste de tous les utilisateurs ayant effectué plus de dix commandes :
+
+12. La liste de tous les produits achetés par le premier utilisateur inscrit :
+SELECT * FROM `orders` WHERE `date` = '2011-01-20'
